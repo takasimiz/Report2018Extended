@@ -1,0 +1,53 @@
+
+\section{Sandbox}
+
+\begin{tikzcd}
+\cdot \ar[Rightarrow]{r}{f} \ar{rd}{a}  & \cdot \ar{d}{g} \ar{rd}{r}\\
+                            & \cdot \ar{r}{h}   & \cdot
+\end{tikzcd}
+
+\begin{tikzcd}
+A & B \\
+  & C & D
+\ar[from=1-1, to=1-2]{}{f}
+\ar[from=1-2, to=2-3]{}{h \circ g}
+\ar[from=1-1, to=2-2]{}[swap]{g \circ f}
+\ar[from=2-2, to=2-3]{}[swap]{h}
+\ar[from=1-2, to=2-2]{}{g}
+\end{tikzcd}
+
+\begin{tikzcd}
+F & G \\
+  & F & G
+\ar[Rightarrow, from=1-1, to=1-2]{}{\tau}
+\ar[Rightarrow, from=1-2, to=2-3]{}{1_{\ct{C}}}
+\ar[Rightarrow, from=1-1, to=2-2]{}[swap]{1_{\ct{D}}}
+\ar[Rightarrow, from=2-2, to=2-3]{}[swap]{\sigma}
+\ar[Rightarrow, from=1-2, to=2-2]{}{\theta}
+\end{tikzcd}
+
+\begin{tikzcd}
+\ct{C}  & \ct{D} \\
+        & \ct{C} & \ct{D}
+\ar[from=1-1, to=1-2]{}{F}
+\ar[from=1-2, to=2-3]{}{1_{\ct{D}}}
+\ar[from=1-1, to=2-2]{}[swap]{1_{\ct{C}}}
+\ar[from=2-2, to=2-3]{}[swap]{F}
+\ar[from=1-2, to=2-2]{}{G}
+\end{tikzcd}
+
+\begin{tikzcd}
+\ctC \ar[bend left=20]{r}[name=F]{F}
+   & \ctD \ar[bend left=20]{l}[name=U]{U}
+               \ar[from=F, to=U, no line]{}{\adj{270}}
+\end{tikzcd}
+
+\noindent
+\begin{equation}
+\begin{tabularx}{\textwidth}{%
+|>{\centering\arraybackslash}m{0.3\textwidth}%
+|>{\centering\arraybackslash}m{0.05\textwidth}%
+|>{\centering\arraybackslash}m{0.3\textwidth}|}
+\tcd{TA \ar{d}{f} \& B\\ A} & is & \tcd{TB}
+\end{tabularx}
+\end{equation}

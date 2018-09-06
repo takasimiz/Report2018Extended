@@ -1,0 +1,59 @@
+\section{Category}
+
+\subsection{Product}
+
+\[\begin{tikzcd}
+    1 \ar[r, "r"]   & R
+\end{tikzcd}\]
+
+\[\begin{tikzcd}
+    1 \ar[d, "d"] \\ 
+    D
+\end{tikzcd}\]
+
+\[\begin{tikzcd}
+    1 \ar{rd}{<d, r>} \\
+                        & R \times D
+\end{tikzcd}\]
+
+\[\begin{tikzcd}
+    1 \ar{r}{r} \ar{d}{d} \ar{rd}{<d, r>}  & R \\
+    D                                      & D \times R
+\end{tikzcd}\]
+
+\[\begin{tikzcd}
+      & R \\
+    D & D \times R \ar[dashrightarrow]{u}{\pi_2} \ar[dashrightarrow]{l}{\pi_1}  
+\end{tikzcd}\]
+
+\subsection{Coproduct}
+
+\[
+x = \begin{cases}
+   a &\text{if } b \\
+   c &\text{if } d
+\end{cases}
+\]
+
+\subsection{Linear function}
+
+A linear function is a functor.
+
+In $ \mathbf{C} $
+
+\[\begin{tikzcd}
+    A \ar[d, "f"] \\ 
+    B \ar[d, "g"] \\
+    C
+\end{tikzcd}\]
+
+with a functor $ F : \mathbf{C} \to \mathbf{D} $
+\[\begin{tikzcd}
+    A \ar[swap, d, "f"] \ar[loop above, "1_A"] \ar[bend left, dd, "g \circ f"] 
+        & FA \ar[swap]{d}{Ff} \ar[loop above, "1_{FA}"] \ar[bend left]{dd}{Fg \circ Ff} \\ 
+    B \ar[swap, d, "g"]                       
+        & FB \ar[swap]{d}{Fg} \\
+    C   
+        & FC
+\end{tikzcd}\]
+

@@ -1,0 +1,26 @@
+
+\begin{Def}
+The category \Ct{Matr}[\setOf{K}] of matrices is defined by object being \setOf{N}, arrows from $n$ to $m$ being $m$-by-$n$ matrices, and the composition being matrix multiplication.
+\end{Def}
+
+\begin{Th}
+\begin{equation}
+    \Ct{Matr}(\setOf{K}) \backsimeq \Ct{FdVect}(\setOf{K})
+\end{equation}
+\end{Th}
+\begin{proof}
+
+\begin{alignat}{3}
+F_e : \Ct{FdVect}(\setOf{K})& \xrightarrow{\quad} 
+\Ct{Matr}(\setOf{K}) \\
+V& \xmapsto{\quad} \rm{dim}(V) \\
+f& \xmapsto{\quad} [f(e_1), \cdots, f(e_{\rm{dim}(V)}) ] \\[1em]
+\Ct{Matr}(\setOf{K})& \xleftarrow{\quad} \Ct{FdVect}(\setOf{K}) : G_e\\
+n& \longmapsfrom{\quad} \setOf{K}^n \\
+A& \longmapsfrom{\quad} \lambda v . [e]Av
+\end{alignat}
+
+Define $E : \Ct{Matr}(\setOf{K}) \to \Ct{FdVect}(\setOf{K})$
+
+\end{proof}
+

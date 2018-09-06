@@ -1,0 +1,93 @@
+\section{Bayes probability as $C^*$-algebra}
+
+\begin{Def}A $C^*$-algebra $A = (|A|, \cdot, 1, \norm{-}, -^*)$ is a vector space over the complex numbers $\Bbb{C}$  such that for all $a,b \in |A|$, $\norm{a}^2 = a^* \cdot a$ and $\norm{a \cdot b} \leq \norm{a}\norm{b}$. A morphism $f : A \to A' $ between $C^*$-algebras is called as follows.
+
+\noindent
+\textit{Multiplicative (M)} when 
+
+\begin{equation}
+a\cdot b  \stackrel{f}{\longmapsto} f(a) \cdot' f(b). \label{eq:starM}
+\end{equation}
+
+\noindent
+\textit{Unital (U)} when
+\begin{equation}
+ 1 \stackrel{f}{\longmapsto} 1'. \label{eq:starU}
+ \end{equation}
+
+\noindent
+\textit{Involutive (I)} when
+\begin{equation}
+f(a^*) = f(a)^*. \label{eq:starI}
+\end{equation}
+
+\noindent
+\textit{Positive (P)} when
+\begin{equation}
+f(a) \geq  0'. \label{starP}
+\end{equation}
+
+\noindent
+\textit{Completely positive (CP)} when
+\begin{equation}
+M_n(f):M_n(A) \to M_n(A') \label{eq:starCP}
+\end{equation}
+is positive for all $n \in \Bbb{N}$, where $M_n(A)$ is the $C^*$-algebra of $n$-by-$n$ matrices whose elements are in $A$, see Example \ref{eg:linalg} for details.
+\end{Def}
+
+\begin{Eg}\label{eg:Cs} The complex numbers $\Bbb{C}$. Let $|\Bbb{C}| = \{a+bi | a,b \in \Bbb{R} \} $, and for all $z,z' \in |\Bbb{C}|$,
+\begin{alignat*}{2}
+z^*         \coloneqq{}& \overline{z}, \\
+\norm{z}    \coloneqq{}& \sqrt{z \overline{z}}, \\
+z \cdot z'  \coloneqq{}& zz'.
+\end{alignat*}
+Obviously $\Cs = (|\Cs|, \cdot, 1, \norm{-}, -^*)$ forms a $C^*$-algebra.
+\end{Eg}
+
+\begin{Eg}\label{eg:linalg}
+Matrix algebra of square matrices. $M_n(A) := (|M_n(A)|, X \cdot Y := XY, I_A, \norm{-}_{\infty}, (-)^\dagger)$
+ for $n \in \Bbb{N}$ is a $C^*$-algebra. Notice
+$M_n(\Cs) \cong \mathcal{B}_n := \mathcal{B}(\Cs^n) := \mathcal{B}(\Cs^n, \Cs^n)$.
+\end{Eg}
+
+Let \ctCstar{PU} be the category of $C^*$-algebras with positive unital maps between them as arrows, and \ctFH{isom} be the category of finite-dimensional Hilbert spaces and isometry maps. There are bijective correspondences about states and effects (predicates). For a predicate (effect) $p$,
+\begin{equation} \label{bij:effect}
+\begin{prooftree}
+    \hypo{ \mathcal{B}_n &\xrightarrow{\mathmakebox[3em]{p}} 1+1 \text{   in \opposite{\ctCstar{PU}}}}
+    \infer[double]1{ \mathcal{B}_n &\xleftarrow{\mathmakebox[3em]{p_{\varphi}}} \mathcal{B}_2 \text{   in \ctCstar{PU}}}
+    \infer[double]1{\Cs^n &\xrightarrow{\mathmakebox[3em]{\varphi}} \Cs^2  \text{   in \ctFH{isom}}}
+\end{prooftree}
+\end{equation}
+where $p_{\varphi}(A) := P^*AP$ with $P:=[\varphi(\ket{0}), ..., \varphi(\ket{n-1})]$, and $1$, resp. $\mathcal{B}_n$, is the $C^*$-algebra from Example \ref{eg:Cs}, resp. Example \ref{eg:linalg}.
+For a state $\omega$,
+\begin{equation} \label{bij:state}
+\begin{prooftree}
+    \hypo{ 1 \xrightarrow{\mathmakebox[3em]{\omega}} \mathcal{B}_n &\text{   in \opposite{\ctCstar{PU}}}}
+    \infer[double]1{\Bbb{C} \xleftarrow{\mathmakebox[3em]{\omega_{\rho}}} \mathcal{B}_n &\text{   in \ctCstar{PU}}}
+    \infer[double]1{\rho \in \DM{\Bbb{C}^n}}
+\end{prooftree}
+\end{equation}
+where $\DM{\Cs^n} := \{\rho \in [0,1]_{\mathcal{B}_n}|\Tr{\rho}=1\}$, $[0,1]_A := \{a \in A| 0 \le a \le 1\}$, and  
+\begin{equation} \label{eq:finstate}
+\omega_{\rho}(p) = \Tr{\rho p}.    
+\end{equation}
+
+The Bayes' theorem
+\[
+Pr(q | p) = \frac{Pr(p \& q)}{Pr(p)}
+\]
+for $p,q \sim \omega$ is
+\[
+(\omega |_p \vDash q) := \frac{\omega \vDash p \& q}{\omega \vDash p}
+\]
+where 
+\[
+p \& q := \sqrt{p} \cdot q \cdot \sqrt{p},
+\] \todo{What's the sqrt?}
+and $\omega \vDash p$ is a compositon $ p \circ \omega$ in \opposite{\ctCstar{PU}}:
+\[\begin{tikzcd}
+1 \ar[r, "\omega"] \ar[bend right]{rr}[swap]{p \circ \omega} & \mathcal{H} \ar[r, "p"] & 1+1,
+\end{tikzcd}\] that is, according to \eqref{bij:effect} and \eqref{bij:state}, $\omega_{\rho} \circ p_{\varphi}$ in \ctCstar{PU}: 
+\[\begin{tikzcd}
+\Cs  & \mathcal{H} \ar[swap, l, "\omega_{\rho}"]  & \Cs  \oplus \Cs, \ar[swap, l, "p_{\varphi}"] \ar[bend left]{ll}{\omega_{\rho} \circ p_{\varphi}}
+\end{tikzcd}\] that is the Born rule: $\omega_{\rho}(p_{\varphi}) \stackrel{\eqref{eq:finstate}}{=} \Tr{\rho PP^*}$.

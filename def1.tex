@@ -1,0 +1,23 @@
+\NewDocumentCommand{\equ}{s O{} m O{}}{%
+\IfBooleanTF{#1}{\[}
+{\begin{equation}\ifthenelse{\isempty{#2}}{}{\label{eq:#2}}}
+#3\nospacepunct{#4}
+\IfBooleanTF{#1}{\]}{\end{equation}}}
+
+
+\NewDocumentCommand{\tce}{s O{} O{} m O{}}{%
+\IfBooleanTF{#1}{\[}
+{\begin{equation}\ifthenelse{\isempty{#3}}{}{\label{di:#3}}}%
+\begin{tikzcd}[ampersand replacement=\&, #2]#4\end{tikzcd}
+#5%
+\IfBooleanTF{#1}{\]}{\end{equation}}}
+
+
+\NewDocumentCommand{\dieq}{s O{} m O{:=} m}{%
+\IfBooleanTF{#1}{\[}
+{\begin{equation}\ifthenelse{\isempty{#2}}{}{\label{di:#2}}}
+\begin{array}{ccc}
+#3&#4&#5
+\end{array}
+\IfBooleanTF{#1}{\]}{\end{equation}}
+}

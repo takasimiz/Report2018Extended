@@ -1,0 +1,41 @@
+\section{Bool}
+
+\begin{Def}
+The category \Ct{BA} is consisted with boolean algebras as objects and boolean homomorphisms between them as arrows.
+\end{Def}
+
+\begin{Lem}
+\begin{equation}
+    \Ct{BA} \backsimeq \Ct{\opposite{Sets}}
+\end{equation}
+\end{Lem}
+\begin{proof}
+Let
+\begin{equation}
+    2^{(-)}:\Ct{BA} \leftrightarrows \Ct{\opposite{Sets}} : \log_2
+\end{equation}
+
+
+\begin{align}
+\log_2 \colon \Ct{BA} &\xrightarrow{\quad} \opposite{\Ct{Sets}}\\
+(B, \land, \lor, \neg, \bot, \top, \subseteq) &\xmapsto{\quad} B\\
+f &\xmapsto{\quad}  \rm{preim}(f) \\[1em]
+\Ct{BA} &\xleftarrow{\quad} \opposite{\Ct{Sets}} : 2^{(-)} \\
+(\mathcal{P}(B), \cap, \cup, \setminus, \phi, \mathcal{P}(B), \leq) &\longmapsfrom{\quad} B \\
+\rm{im}(f) &\longmapsfrom{\quad} f
+\end{align}
+
+\end{proof}
+
+\memo{preim() is inverse of im()?}
+
+\memo{Does 
+$\opposite{\ct C} \backsimeq \ct D$ iff 
+$\ct C \backsimeq \opposite{\ct D}$ ?
+}
+
+%\tikzset{commutative diagrams/.cd, arrow style=tikz, diagrams={>= triangle 45}}
+\begin{tikzcd}[cells={nodes={draw=gray}}]
+ & Set(bool) \arrow[ld] \arrow[rd] &  & Dirac \arrow[d] \\
+ML &  & Bayes & Effect
+\end{tikzcd}
