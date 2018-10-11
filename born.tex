@@ -1,0 +1,92 @@
+Quantum prob 101 for bayes reserachers
+
+\hypertarget{the-born-rule}{%
+\section{The Born rule}\label{the-born-rule}}
+
+\hypertarget{the-born-rule-for-finite-dimensional-case-is}{%
+\subsection{The Born rule for finite-dimensional case
+is}\label{the-born-rule-for-finite-dimensional-case-is}}
+
+\[Pr(p|\rho) = Tr(\rho p)\] @label-eq:born or
+\[Pr(p|\rho) = Tr(\rho p)\] @label-eq:born
+\[(\rho \vDash p) = Tr(\rho p)\] @label-eq:born Recap: classical prob
+(Bayes):
+
+\hypertarget{recall-the-bayes-theorem-for-discrete-distribution-omega-is}{%
+\subsection{\texorpdfstring{Recall the Bayes' theorem for discrete
+distribution \[\omega\]
+is}{Recall the Bayes' theorem for discrete distribution \textbackslash{}omega is}}\label{recall-the-bayes-theorem-for-discrete-distribution-omega-is}}
+
+\hypertarget{prqp-prpqprqprp-label-eqbayes}{%
+\subsubsection{\texorpdfstring{\[Pr(q|p) = Pr(p|q)Pr(q)/Pr(p)\]
+@label-eq:bayes}{Pr(q\textbar{}p) = Pr(p\textbar{}q)Pr(q)/Pr(p) @label-eq:bayes}}\label{prqp-prpqprqprp-label-eqbayes}}
+
+where \[p, q \sim \omega\] and \[Pr(q) \neq 0\].
+
+\hypertarget{this-equality-is-based-on-the-commutatibity-of-classical-prob.}{%
+\subsubsection{This equality is based on the commutatibity of classical
+prob.}\label{this-equality-is-based-on-the-commutatibity-of-classical-prob.}}
+
+\hypertarget{prqpprq-prp-q-prq-p-prpqprp.}{%
+\paragraph{\texorpdfstring{\[Pr(q|p)/Pr(q) = Pr(p \& q) = Pr(q \& p) = Pr(p|q)/Pr(p)\].}{Pr(q\textbar{}p)/Pr(q) = Pr(p \textbackslash{}\& q) = Pr(q \textbackslash{}\& p) = Pr(p\textbar{}q)/Pr(p).}}\label{prqpprq-prp-q-prq-p-prpqprp.}}
+
+\hypertarget{where}{%
+\subparagraph{where}\label{where}}
+
+\[p \& q = \sqrt{p}q\sqrt{p}\]. In order to represent @label-eq:bayes,
+\#? In the context of quantum probability, bayes theorem'
+@label-eq:bayes is
+
+\hypertarget{let-a-b-ab---ba}{%
+\subsection{\texorpdfstring{Let
+\[[A, B] := AB - BA\]}{Let {[}A, B{]} := AB - BA}}\label{let-a-b-ab---ba}}
+
+Theorem \[[A,B] =0\] iff (\#{[}Jac15{]}, Th??)
+
+\hypertarget{if-pq-0-i.e.-p-and-q-are-commutative}{%
+\subsubsection{\texorpdfstring{if \[[p,q] = 0\], i.e. \[p\] and \[q\]
+are
+commutative,}{if {[}p,q{]} = 0, i.e. p and q are commutative,}}\label{if-pq-0-i.e.-p-and-q-are-commutative}}
+
+\hypertarget{omega-vdash-p-q-tromega-sqrt-p-q-sqrt-p-tromega-sqrt-p-sqrt-p-q-tromega-p-q-tromega-p-sqrt-q-sqrt-q-tromega-sqrt-q-p-sqrt-q-omega-vdash-q-p}{%
+\paragraph{\texorpdfstring{\[(\omega \vDash p \& q) = Tr(\omega \sqrt p q \sqrt p) = Tr(\omega \sqrt p \sqrt p q) = Tr(\omega p q) = Tr(\omega p \sqrt q \sqrt q) = Tr(\omega  \sqrt q p \sqrt q) = (\omega \vDash q \& p)\]}{(\textbackslash{}omega \textbackslash{}vDash p \textbackslash{}\& q) = Tr(\textbackslash{}omega \textbackslash{}sqrt p q \textbackslash{}sqrt p) = Tr(\textbackslash{}omega \textbackslash{}sqrt p \textbackslash{}sqrt p q) = Tr(\textbackslash{}omega p q) = Tr(\textbackslash{}omega p \textbackslash{}sqrt q \textbackslash{}sqrt q) = Tr(\textbackslash{}omega  \textbackslash{}sqrt q p \textbackslash{}sqrt q) = (\textbackslash{}omega \textbackslash{}vDash q \textbackslash{}\& p)}}\label{omega-vdash-p-q-tromega-sqrt-p-q-sqrt-p-tromega-sqrt-p-sqrt-p-q-tromega-p-q-tromega-p-sqrt-q-sqrt-q-tromega-sqrt-q-p-sqrt-q-omega-vdash-q-p}}
+
+then @label-eq:bayes hold.
+
+\hypertarget{let}{%
+\paragraph{Let}\label{let}}
+
+\[s = diag((s_i)_i)\] \[p = diag((p_i)_i)\] \[q = diag((q_i)_i)\]
+\[\omega|_p \vDash q\] is
+
+\hypertarget{omega_p-vdash-q-omega-vdash-p-q-omega-vdash-p-tromega-sqrt-p-q-sqrt-ptromega-p-tromega-p-qtromega-p}{%
+\paragraph{\texorpdfstring{\[(\omega|_p \vDash q) = (\omega \vDash p \& q) / (\omega \vDash p) = Tr(\omega \sqrt p q \sqrt p)/Tr(\omega p)= Tr(\omega  p q)/Tr(\omega p) \]}{(\textbackslash{}omega\textbar{}\_p \textbackslash{}vDash q) = (\textbackslash{}omega \textbackslash{}vDash p \textbackslash{}\& q) / (\textbackslash{}omega \textbackslash{}vDash p) = Tr(\textbackslash{}omega \textbackslash{}sqrt p q \textbackslash{}sqrt p)/Tr(\textbackslash{}omega p)= Tr(\textbackslash{}omega  p q)/Tr(\textbackslash{}omega p) }}\label{omega_p-vdash-q-omega-vdash-p-q-omega-vdash-p-tromega-sqrt-p-q-sqrt-ptromega-p-tromega-p-qtromega-p}}
+
+\[Tr(\omega p) = \sum_i \omega_i p_i = \]
+
+\hypertarget{hence-if-omega-vdash-p-q-omega-vdash-q-p-i.e.}{%
+\paragraph{\texorpdfstring{Hence if
+\[ (\omega \vDash p \& q) = (\omega \vDash q \& p)\],
+i.e.}{Hence if  (\textbackslash{}omega \textbackslash{}vDash p \textbackslash{}\& q) = (\textbackslash{}omega \textbackslash{}vDash q \textbackslash{}\& p), i.e.}}\label{hence-if-omega-vdash-p-q-omega-vdash-q-p-i.e.}}
+
+\[Tr(\omega \sqrt{p}q\sqrt{p}) = Tr(\omega \sqrt{q}p\sqrt{q})\] then
+@label-eq:condEff is @label-eq:bayes.
+
+\hypertarget{diagonal-and-classical}{%
+\subsection{Diagonal and classical}\label{diagonal-and-classical}}
+
+\hypertarget{when-a-density-matrix-s-is-diagonal}{%
+\subsubsection{\texorpdfstring{When a density matrix \[S\] is
+diagonal}{When a density matrix S is diagonal}}\label{when-a-density-matrix-s-is-diagonal}}
+
+\[S = diag(s_1,s_2,...,s_d)\]
+
+\hypertarget{the-bayes-theorem-is-thus}{%
+\subsubsection{The Bayes' theorem is
+thus}\label{the-bayes-theorem-is-thus}}
+
+\[Tr\] \#d-fill Because \#d-fill quantum prob is a prob different than
+normal prob, such as Bayes prob.
+
+\hypertarget{read}{%
+\section{Read}\label{read}}

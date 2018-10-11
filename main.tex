@@ -87,6 +87,8 @@ sorting=ynt
 
 \usepackage{ebproof}
 
+\newcommand{\pr}[1]{\mathrm{Pr}(#1)}
+
 \newcommand{\Cs}{\Bbb{C}}
 \newcommand{\Rs}{\Bbb{R}}
 
@@ -129,8 +131,8 @@ sorting=ynt
 %\newcommand{\opposite}[1]{\mathbf{#1}^\mathrm{op}}
 \newcommand{\opposite}[1]{\ensuremath{\mathbf{#1}^\mathrm{op}}}
 
-\usepackage[footnotes,definitionLists,hashEnumerators,smartEllipses,hybrid]{markdown}
-
+%\usepackage[footnotes,definitionLists,hashEnumerators,smartEllipses,hybrid]{markdown}
+\usepackage[fencedCode,inlineFootnotes,citations,definitionLists,hashEnumerators,smartEllipses,hybrid]{markdown}
 
 % https://tex.stackexchange.com/questions/126711/
 %\newcommand{\sslash}{\mathbin{/\mkern-6mu/}}
@@ -240,9 +242,11 @@ sorting=ynt
 \tableofcontents\label{toc}
 
 %\input{sandbox.tex}
-\input{intro.tex}
+\markdownInput{sb.md}
+%\input{intro.tex}
 \listoftodos[(Todos)]
-\input{effectus.tex}
+%\input{born.tex}
+%\input{effectus.tex}
 %\input{progress.tex}
 
 \printbibliography
